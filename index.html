@@ -15,16 +15,21 @@
 
       <div class="form-group">
         <label for="dayInput">Select Day (A-G):</label>
-        <input
-          type="text"
-          id="dayInput"
-          class="form-control"
-          placeholder="Enter a day (A-G)"
-        />
+        <select id="dayInput" class="form-control">
+          <option value="">-- Select a Day --</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+          <option value="E">E</option>
+          <option value="F">F</option>
+          <option value="G">G</option>
+        </select>
         <button id="submitDay" class="btn btn-primary mt-2">
           Show Schedule
         </button>
       </div>
+
       <div class="schedule">
         <h3 class="text-center">Your Schedule for the Day</h3>
         <table class="table table-bordered table-striped">
@@ -39,6 +44,11 @@
           </thead>
           <tbody id="scheduleList"></tbody>
         </table>
+        <div
+          id="noClassesMessage"
+          class="text-center text-danger"
+          style="display: none"
+        ></div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
